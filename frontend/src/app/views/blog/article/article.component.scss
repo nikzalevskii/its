@@ -234,6 +234,8 @@
       .article-content-related-articles {
         margin-top: 60px;
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         flex-direction: column;
         row-gap: 60px;
         @media screen and (max-width: 1025px) {
