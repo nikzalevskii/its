@@ -1,5 +1,5 @@
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
-import {catchError, Observable, switchMap, throwError} from "rxjs";
+import {catchError, finalize, Observable, switchMap, throwError} from "rxjs";
 import {inject, Injectable} from "@angular/core";
 import {AuthService} from "./auth.service";
 import {DefaultResponseInterface} from "../../../interfaces/default-response.interface";
@@ -11,7 +11,7 @@ import {LoaderService} from "../../shared/services/loader.service";
 export class AuthInterceptor implements HttpInterceptor {
   private _authService: AuthService = inject(AuthService);
   private _router: Router = inject(Router);
-  private _loaderService:LoaderService = inject(LoaderService);
+  private _loaderService: LoaderService = inject(LoaderService);
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     this._loaderService.show();
@@ -27,10 +27,14 @@ export class AuthInterceptor implements HttpInterceptor {
               return this.handle401Error(authReq, next);
             }
             return throwError(() => error);
-          })
+          }),
+          finalize(() => this._loaderService.hide())
         );
     }
-    return next.handle(req);
+    return next.handle(req)
+      .pipe(
+        finalize(() => this._loaderService.hide())
+      );
 
   }
 
