@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  api: 'https://its-cfjf.onrender.com/api/',
-  serverStaticPath: 'https://its-cfjf.onrender.com/images/',
+  api: 'https://its-26u4.onrender.com/api/',
+  serverStaticPath: 'https://its-26u4.onrender.com/images/',
 };
