@@ -62,8 +62,8 @@ MongoDBConnection.getConnection((error, connection) => {
     app.use("/api/users", userRoutes);
 
 
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'docs', 'index.html'));
+    app.use(function (req, res, next) {
+        res.sendFile(path.join(__dirname, 'docs', 'index.html')); // Перенаправление на index.html
     });
 
 
