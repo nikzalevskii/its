@@ -128,7 +128,7 @@ export class ArticleComponent implements OnInit, OnDestroy {
   }
 
   loadComments():void {
-    this._loaderService.show();
+    // this._loaderService.show();
     if (this.article && this.restComments > 0) {
       this.offset += COMMENTS.NEXT_SHOWED;
       this._commentService.getComments({offset: this.offset, article: this.article.id})
@@ -153,7 +153,7 @@ export class ArticleComponent implements OnInit, OnDestroy {
             if (this.showingComments) {
               this.showingComments = [...this.showingComments, ...this.allComments.comments.slice(this.offset - COMMENTS.NEXT_SHOWED + COMMENTS.FIRSTLY_SHOWED, this.offset + COMMENTS.FIRSTLY_SHOWED)];
               this.restComments = Math.max(this.allComments.allCount - this.showingComments.length, 0);
-              this._loaderService.hide();
+              // this._loaderService.hide();
             }
           }
         });

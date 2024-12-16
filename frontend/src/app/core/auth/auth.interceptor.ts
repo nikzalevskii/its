@@ -5,13 +5,16 @@ import {AuthService} from "./auth.service";
 import {DefaultResponseInterface} from "../../../interfaces/default-response.interface";
 import {LoginResponseInterface} from "../../../interfaces/login-response.interface";
 import {Router} from "@angular/router";
+import {LoaderService} from "../../shared/services/loader.service";
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
   private _authService: AuthService = inject(AuthService);
   private _router: Router = inject(Router);
+  private _loaderService:LoaderService = inject(LoaderService);
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    this._loaderService.show();
     const tokens = this._authService.getTokens();
     if (tokens && tokens.accessToken) {
       const authReq = req.clone({
