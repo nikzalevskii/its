@@ -61,6 +61,12 @@ MongoDBConnection.getConnection((error, connection) => {
     app.use("/api/comments", commentRoutes);
     app.use("/api/users", userRoutes);
 
+    //
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    });
+    //
+
     app.use(function (req, res, next) {
         const err = new Error('Not Found');
         err.status = 404;
