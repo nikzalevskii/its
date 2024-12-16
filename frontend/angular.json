@@ -32,7 +32,8 @@
               "./node_modules/swiper/swiper-bundle.min.css",
               "src/assets/styles/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
