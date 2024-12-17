@@ -8,13 +8,13 @@ import {HeaderComponent} from './shared/layout/header/header.component';
 import {FooterComponent} from './shared/layout/footer/footer.component';
 import {MainComponent} from './views/main/main.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MAT_SNACK_BAR_DEFAULT_OPTIONS, MatSnackBarModule} from "@angular/material/snack-bar";
+import {MAT_LEGACY_SNACK_BAR_DEFAULT_OPTIONS as MAT_SNACK_BAR_DEFAULT_OPTIONS, MatLegacySnackBarModule as MatSnackBarModule} from "@angular/material/legacy-snack-bar";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
-import {MatMenuModule} from "@angular/material/menu";
+import {MatLegacyMenuModule as MatMenuModule} from "@angular/material/legacy-menu";
 import {SharedModule} from "./shared/shared.module";
 import {AuthInterceptor} from "./core/auth/auth.interceptor";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {MatDialogModule} from "@angular/material/dialog";
+import {MatLegacyDialogModule as MatDialogModule} from "@angular/material/legacy-dialog";
 import { TermsComponent } from './views/legal/terms/terms.component';
 import {NgxMaskModule} from "ngx-mask";
 

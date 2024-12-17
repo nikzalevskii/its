@@ -3,11 +3,11 @@ import {Swiper} from 'swiper';
 import {Navigation, Pagination} from 'swiper';
 import {ArticleService} from "../../shared/services/article.service";
 import {ArticleInterface} from "../../../interfaces/article.interface";
-import {MatDialog} from "@angular/material/dialog";
+import {MatLegacyDialog as MatDialog} from "@angular/material/legacy-dialog";
 import {PopupComponent} from "../../shared/components/popup/popup.component";
 import {catchError, of, Subject, takeUntil} from "rxjs";
 import {ActivatedRoute, Router} from "@angular/router";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatLegacySnackBar as MatSnackBar} from "@angular/material/legacy-snack-bar";
 
 // Инициализация Swiper с нужными модулями
 Swiper.use([Navigation, Pagination]);

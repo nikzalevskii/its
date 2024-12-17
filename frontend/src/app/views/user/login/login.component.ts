@@ -4,7 +4,7 @@ import {AuthService} from "../../../core/auth/auth.service";
 import {LoginResponseInterface} from "../../../../interfaces/login-response.interface";
 import {DefaultResponseInterface} from "../../../../interfaces/default-response.interface";
 import {HttpErrorResponse} from "@angular/common/http";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatLegacySnackBar as MatSnackBar} from "@angular/material/legacy-snack-bar";
 import {Router} from "@angular/router";
 import {Subject, takeUntil} from "rxjs";
 

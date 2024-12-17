@@ -1,7 +1,7 @@
 import {Component, inject, OnDestroy, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../../../core/auth/auth.service";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatLegacySnackBar as MatSnackBar} from "@angular/material/legacy-snack-bar";
 import {Router} from "@angular/router";
 import {LoginResponseInterface} from "../../../../interfaces/login-response.interface";
 import {DefaultResponseInterface} from "../../../../interfaces/default-response.interface";

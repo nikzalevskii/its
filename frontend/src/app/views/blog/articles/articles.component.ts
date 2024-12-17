@@ -9,7 +9,7 @@ import {ActiveParamsUtil} from "../../../shared/utils/active-params.util";
 import {AppliedFilterInterface} from "../../../../interfaces/applied-filter.interface";
 import {ActiveParamsInterface} from "../../../../interfaces/active-params.interface";
 import {catchError, debounceTime, of, Subject, takeUntil, throwError} from "rxjs";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatLegacySnackBar as MatSnackBar} from "@angular/material/legacy-snack-bar";
 import {DEBOUNCE_TIME} from "../../../shared/constants/app-constants";
 
 @Component({

@@ -7,7 +7,7 @@ import {ArticleInterface} from "../../../../interfaces/article.interface";
 import {AuthService} from "../../../core/auth/auth.service";
 import {CommentService} from "../../../shared/services/comment.service";
 import {DefaultResponseInterface} from "../../../../interfaces/default-response.interface";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatLegacySnackBar as MatSnackBar} from "@angular/material/legacy-snack-bar";
 import {CommentInterface} from "../../../../interfaces/comment.interface";
 import {CommentUserInterface} from "../../../../interfaces/comment.user.interface";
 import {LoaderService} from "../../../shared/services/loader.service";

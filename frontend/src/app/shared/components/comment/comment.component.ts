@@ -1,5 +1,5 @@
 import {Component, inject, Input, OnDestroy, OnInit} from '@angular/core';
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatLegacySnackBar as MatSnackBar} from "@angular/material/legacy-snack-bar";
 import {CommentUserInterface} from "../../../../interfaces/comment.user.interface";
 import {CommentService} from "../../services/comment.service";
 import {ArticleContentInterface} from "../../../../interfaces/article-content.interface";
