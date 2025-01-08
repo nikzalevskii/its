@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  api: 'https://its-26u4.onrender.com/api/',
-  serverStaticPath: 'https://its-26u4.onrender.com/images/',
+  api: 'https://its-backend-two.vercel.app//api/',
+  serverStaticPath: 'https://its-backend-two.vercel.app//images/',
 };
