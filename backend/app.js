@@ -62,14 +62,14 @@ MongoDBConnection.getConnection((error, connection) => {
     app.use("/api/users", userRoutes);
 
 
-    // app.get('*', (req, res) => {
-    //     res.sendFile(path.join(__dirname, 'docs', 'index.html')); // Путь к index.html для фронтенда
-    // });
-
     app.get('*', (req, res) => {
-        // res.redirect('https://itstorm.onrender.com' + req.originalUrl); // Перенаправляем на фронтенд
-        res.redirect('https://its-eta.vercel.app' + req.originalUrl); // Перенаправляем на фронтенд
+        res.sendFile(path.join(__dirname, 'docs', 'index.html')); // Путь к index.html для фронтенда
     });
+
+    // app.get('*', (req, res) => {
+    //     // res.redirect('https://itstorm.onrender.com' + req.originalUrl); // Перенаправляем на фронтенд
+    //     res.redirect('https://its-eta.vercel.app' + req.originalUrl); // Перенаправляем на фронтенд
+    // });
 
 // Обработка ошибок 404 для маршрутов, которые не существуют
     app.use(function (req, res, next) {
